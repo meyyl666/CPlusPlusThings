@@ -38,7 +38,7 @@ public:
         BOY = 0, 
         GIRL 
     }SexType;
-    Person(char *n, int a,SexType s){
+    Person(char *n, int a,SexType s){  //这里的char *n  应该改为const char*n,否则后面的初试化会出现错误：const变量不能赋值给非const变量
         name=new char[strlen(n)+1];
         strcpy(name,n);
         age=a;
